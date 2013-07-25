@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725144756) do
+ActiveRecord::Schema.define(version: 20130725145244) do
+
+  create_table "metrics", force: true do |t|
+    t.integer  "total_memory"
+    t.integer  "used_memory"
+    t.integer  "total_storage"
+    t.integer  "used_storage"
+    t.integer  "server_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "servers", force: true do |t|
     t.string   "ip"

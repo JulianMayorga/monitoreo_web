@@ -4,6 +4,10 @@
   <thead>
     <tr>
       <th>Ip</th>
+      <th>Memoria Usada</th>
+      <th>Consumo Actual</th>
+      <th>Almacenamiento Total</th>
+      <th>Consumo Actual</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +18,10 @@
     <% @servers.each do |server| %>
       <tr>
         <td><%= server.ip %></td>
+        <td><%= server.total_memory %></td>
+        <td><%= server.used_memory %></td>
+        <td><%= server.total_storage %></td>
+        <td><%= server.used_storage %></td>
         <td><%= link_to 'Show', server %></td>
         <td><%= link_to 'Edit', edit_server_path(server) %></td>
         <td><%= link_to 'Destroy', server, method: :delete, data: { confirm: 'Are you sure?' } %></td>

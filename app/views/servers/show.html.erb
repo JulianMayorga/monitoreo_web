@@ -3,6 +3,14 @@
 <p>
   <strong>Ip:</strong>
   <%= @server.ip %>
+  <strong>Memoria Total:</strong>
+  <%= @server.total_memory %>
+  <strong>Memoria Usada:</strong>
+  <%= @server.used_memory %>
+  <strong>Almacenamiento Total:</strong>
+  <%= @server.total_storage %>
+  <strong>Almacenamiento Usado:</strong>
+  <%= @server.used_storage %>
 </p>
 
 <%= link_to 'Edit', edit_server_path(@server) %> |
